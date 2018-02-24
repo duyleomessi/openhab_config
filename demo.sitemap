@@ -1,0 +1,14 @@
+sitemap demo label="Main Menu"
+{
+	Frame label="Control"
+	{
+		Group item=Floor1 label="Floor 1" icon="groundfloor"
+		Group item=Floor2 label="Floor 2" icon="firstfloor"
+		Group item=Floor3 label="Floor 3" icon="attic"
+	}
+
+	Frame label="weather"
+	{
+		Text item=Temperature
+	}
+}

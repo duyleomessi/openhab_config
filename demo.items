@@ -1,0 +1,25 @@
+Group Floor1  "Floor 1" 
+Group Floor2  "Floor 2" 
+Group Floor3  "Floor 3" 
+
+Group LivingRoom1	"Living Room" <corridor>	(Floor1)
+Group Toilet1		"Toilet"      <toilet>	(Floor1) 
+
+Group BathRoom2		"Bath Room" <bath>	(Floor2)
+Group BedRoom2		"Bed Room"	<bedroom>	(Floor2)	
+
+Group Kitchen3		"Kitchen Room" <kitchen>	(Floor3)
+
+
+Switch Light_Of_Living_Room_1 "Light Of Living Room 1" <light> (LivingRoom1) ["Switchable"] {mqtt=">[broker:duyld_openhab2/LivingRoom1/Light:command:ON:ON], >[broker:duyld_openhab2/LivingRoom1/Light:command:OFF:OFF"}
+
+Switch Fan_Of_Living_Room_1 "Fan Of Living Room 1" <fan> (LivingRoom1) ["Switchable"]  {mqtt=">[broker:duyld_openhab2/LivingRoom1/Fan:command:ON:ON], >[broker:duyld_openhab2/LivingRoom1/Fan:command:OFF:OFF"}
+
+Switch Light_Of_Toilet_1 "Light Of Toilet 1" <light> (Toilet1) ["Switchable"]  {mqtt=">[broker:duyld_openhab2/Toilet1/Light:command:ON:ON], >[broker:duyld_openhab2/Toilet1/Light:command:OFF:OFF"}
+
+Switch Light_Of_Kitchen_3 "Light Of Kitchen 3" <light> (Kitchen3) ["Switchable"] {mqtt=">[broker:duyld_openhab2/Kitchen3/Light:command:ON:ON], >[broker:duyld_openhab2/Kitchen3/Light:command:OFF:OFF"}
+
+
+Number Temperature "Temperature [%.1f *C]" <temperature> {mqtt=">[broker:duyld_openhab2/Temperature:state:default]"}
+
+String VoiceCommand
